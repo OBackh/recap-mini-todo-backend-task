@@ -38,4 +38,10 @@ public class TodoController {
     public void deleteTodo(@PathVariable String id) {
         todoService.deleteTodo(id);
     }
+
+    @GetMapping("/error")
+    public void throwError() {
+        throw new RuntimeException("Eine Runtime-Fehlermeldung");
+    }
+
 }
